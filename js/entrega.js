@@ -4,6 +4,15 @@ let nombre = prompt('Ingrese nombre').toUpperCase();
 let apellido = prompt('Ingrese apellido').toUpperCase();
 let edad = prompt('Ingrese edad').toUpperCase();
 
+
+
+if (edad >= 18){
+    alert('Sos mayor de edad, podes ingresar.');
+} else {
+    alert("Sos menor de edad, no podés ingresar.")
+}
+
+
 alert('Bienvenido: ' + nombre + ' ' + apellido + '!!' + ' '+ 'Usted va a realizar una cotizacion de divisas en tiempo real.');
 
 
