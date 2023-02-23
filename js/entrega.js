@@ -1,20 +1,24 @@
 
-
 let nombre = prompt('Ingrese nombre').toUpperCase();
 let apellido = prompt('Ingrese apellido').toUpperCase();
-let edad = prompt('Ingrese edad').toUpperCase();
 
 
 
-if (edad >= 18){
-    alert('Sos mayor de edad, podes ingresar.');
-} else {
-    alert("Sos menor de edad, no podés ingresar.")
-}
-
-
-alert('Bienvenido: ' + nombre + ' ' + apellido + '!!' + ' '+ 'Usted va a realizar una cotizacion de divisas en tiempo real.');
-
+while (true) {
+    let edad = prompt("Ingrese su edad:");
+  
+    if (edad === null) {
+      alert("No se ingresó ninguna edad. Por favor, inténtelo nuevamente.");
+    } else if (isNaN(edad)) {
+      alert("El valor ingresado no es un número. Por favor, inténtelo nuevamente.");
+    } else if (edad < 18) {
+      alert("Lo siento, debe ser mayor de edad para ingresar.");
+      continue;
+    } else {
+        alert('Bienvenido: ' + nombre + ' ' + apellido + '!!' + ' '+ 'Usted va a realizar una cotizacion de divisas en tiempo real.');
+      break;
+    }
+  }
 
 
 const COTIZACION_EURO = 400;
@@ -30,7 +34,7 @@ switch (seleccion) {
         alert(cotizarEuro(valor));
         break;
     default:
-        alert('Ha ingresado un producto inexistente')
+        alert('Ha ingresado una divisa inexistente, vuelva a repetir el proceso')
         break;
 }
 
